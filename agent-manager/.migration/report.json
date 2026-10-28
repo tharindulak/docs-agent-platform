@@ -1,0 +1,80 @@
+{
+  "summary": {
+    "source": "wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add",
+    "sourceKind": "docusaurus",
+    "edition": "cloud",
+    "legacyBase": "https://wso2.com/agent-platform/docs/cloud/",
+    "sidebar": "version-cloud-sidebars.json (JSON)",
+    "navPages": 37,
+    "sourceFiles": 38,
+    "stats": {
+      "pages": 37,
+      "partials": 0,
+      "apiPages": 0,
+      "images": 15,
+      "imageBytes": 19601730,
+      "unlisted": 0,
+      "links": 199,
+      "legacyLinks": 0,
+      "droppedLinks": 0,
+      "missingImages": 0,
+      "generatedDescriptions": 34,
+      "sidebarLabels": 3,
+      "components": {
+        "mermaid (shown as code)": 6,
+        "admonition caution→warning": 2
+      },
+      "paletteFallbacks": 0,
+      "acceptedByOverrides": 0,
+      "excludedPages": 0,
+      "legacyRedirects": 37
+    },
+    "issues": {
+      "fallback": 6,
+      "partial": 1
+    },
+    "compileFailures": 0,
+    "contentSafetyFindings": 0,
+    "overrides": {
+      "patches": 0,
+      "patchesApplied": 0
+    }
+  },
+  "items": [
+    {
+      "kind": "fallback",
+      "file": "concepts/agentid.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "fallback",
+      "file": "concepts/evaluation.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "fallback",
+      "file": "guides/use-agentid-in-platform-hosted-agents.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "fallback",
+      "file": "tutorials/give-the-agent-real-tools.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "fallback",
+      "file": "tutorials/govern-the-model.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "fallback",
+      "file": "tutorials/promote-your-agent.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "partial",
+      "file": "_constants.md",
+      "message": "a partial no converted page imports; left out"
+    }
+  ]
+}
