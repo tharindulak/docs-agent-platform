@@ -9,7 +9,7 @@ editionNames:
 home: agent-platform
 owners:
   team: agent-platform-docs
-repo: wso2/docs-agent-platform
+repo: tharindulak/docs-agent-platform
 editLinks: false
 issues:
   repo: wso2/docs-agent-platform
