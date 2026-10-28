@@ -2,36 +2,39 @@
   "summary": {
     "source": "wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add",
     "sourceKind": "docusaurus",
-    "edition": "cloud",
-    "legacyBase": "https://wso2.com/agent-platform/docs/cloud/",
-    "sidebar": "version-cloud-sidebars.json (JSON)",
-    "navPages": 37,
-    "sourceFiles": 38,
+    "edition": "1.0.0",
+    "legacyBase": "https://wso2.com/agent-platform/docs/v1.0.0/",
+    "sidebar": "version-v1.0.0-sidebars.json (JSON)",
+    "navPages": 71,
+    "sourceFiles": 73,
     "stats": {
-      "pages": 37,
+      "pages": 71,
       "partials": 0,
       "apiPages": 0,
       "images": 15,
       "imageBytes": 19601730,
       "unlisted": 0,
-      "links": 199,
+      "links": 454,
       "legacyLinks": 0,
       "droppedLinks": 0,
       "missingImages": 0,
-      "generatedDescriptions": 34,
-      "sidebarLabels": 3,
+      "generatedDescriptions": 69,
+      "sidebarLabels": 12,
       "components": {
-        "mermaid (shown as code)": 6,
-        "admonition caution→warning": 2
+        "mermaid (shown as code)": 10,
+        "admonition caution→warning": 5,
+        "conditional wrapper (applied)": 20,
+        "collapsible section (applied)": 2,
+        "partial with props (inlined)": 2
       },
       "paletteFallbacks": 0,
       "acceptedByOverrides": 0,
       "excludedPages": 0,
-      "legacyRedirects": 37
+      "legacyRedirects": 71
     },
     "issues": {
-      "fallback": 6,
-      "partial": 1
+      "fallback": 10,
+      "partial": 2
     },
     "compileFailures": 0,
     "contentSafetyFindings": 0,
@@ -58,6 +61,26 @@
     },
     {
       "kind": "fallback",
+      "file": "guides/on-a-vm.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "fallback",
+      "file": "guides/on-a-vm.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "fallback",
+      "file": "guides/on-a-vm.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "fallback",
+      "file": "guides/use-a-custom-gateway-image.mdx",
+      "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
+    },
+    {
+      "kind": "fallback",
       "file": "tutorials/give-the-agent-real-tools.mdx",
       "message": "a Mermaid diagram is shown as its code: the Platform renders no Mermaid diagrams"
     },
@@ -75,6 +98,11 @@
       "kind": "partial",
       "file": "_constants.md",
       "message": "a partial no converted page imports; left out"
+    },
+    {
+      "kind": "partial",
+      "file": "guides/_partials/_amp-installation.mdx",
+      "message": "a partial that takes props: inlined into each page that uses it (Platform partials take none)"
     }
   ]
 }

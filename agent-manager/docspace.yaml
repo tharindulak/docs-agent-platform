@@ -11,7 +11,7 @@ cloud:
   in: agent-platform
 owners:
   team: agent-platform-docs
-repo: tharindulak/docs-agent-platform
+repo: wso2/docs-agent-platform
 editLinks: false
 issues:
   repo: wso2/docs-agent-platform
