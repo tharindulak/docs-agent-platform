@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "source": "wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add",
+    "edition": "cloud",
+    "legacyBase": "https://wso2.com/agent-platform/docs/cloud/",
+    "navPages": 0,
+    "parts": [
+      "agent-manager"
+    ],
+    "stats": {
+      "pages": 1,
+      "partials": 0,
+      "apiPages": 0,
+      "images": 0,
+      "cardLinks": 0,
+      "acceptedByOverrides": 0
+    },
+    "issues": {},
+    "compileFailures": 0,
+    "overrides": {
+      "patches": 0,
+      "patchesApplied": 0,
+      "accepted": 0
+    }
+  },
+  "items": []
+}
