@@ -2,7 +2,7 @@
 title: Manage Environments and Deployment Pipelines
 description: Environments and deployment pipelines are organization-level constructs that control where your agents run and how they are promoted from one stage to the…  # generated from the first paragraph; a writer should improve it
 type: how-to
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 Environments and deployment pipelines are organization-level constructs that control *where* your agents run and *how* they are promoted from one stage to the next (for example `Development → Staging → Production`).
@@ -61,8 +61,8 @@ The Console presents the tiers as three sandboxing levels of increasing strength
 | Console label | Tier value | Runtime | Isolation | Requirements |
 |------|------|---------|-----------|--------------|
 | **Sandboxing T1** (default) | `runc` | Standard container runtime | Sandboxed pod, shared host kernel | None — works everywhere |
-| **Sandboxing T2** | `gvisor` | gVisor (`runsc`) | Userspace kernel intercepts syscalls | A dedicated x86_64 node — see the <Edition only="self-hosted">[gVisor guide](../securing-agent-endpoints/isolation-tiers/gvisor.mdx)</Edition><Edition only="cloud">gVisor guide</Edition> |
-| **Sandboxing T3** | `kata` | Kata Containers (`kata-qemu`) | Per-agent VM with its own guest kernel | A dedicated node with KVM — see the <Edition only="self-hosted">[Kata guide](../securing-agent-endpoints/isolation-tiers/kata.mdx)</Edition><Edition only="cloud">Kata guide</Edition> |
+| **Sandboxing T2** | `gvisor` | gVisor (`runsc`) | Userspace kernel intercepts syscalls | A dedicated x86_64 node — see the [gVisor guide](../securing-agent-endpoints/isolation-tiers/gvisor.mdx) |
+| **Sandboxing T3** | `kata` | Kata Containers (`kata-qemu`) | Per-agent VM with its own guest kernel | A dedicated node with KVM — see the [Kata guide](../securing-agent-endpoints/isolation-tiers/kata.mdx) |
 
 To create an environment with a stronger tier, set up the node first (per the guides above), then pick the tier from the **Isolation Tier** dropdown in the **Create Environment** drawer. The generated command automatically includes the matching `ISOLATION_TIER` variable — for `runc` (the default) no variable is added. Selecting gVisor or Kata also shows a warning with a link to the corresponding node setup guide.
 
@@ -112,7 +112,7 @@ Deletion needs no equivalent flag: the delete command detects the egress release
 
    The script uninstalls the environment's API Platform Gateway Helm release and then deletes the environment in Agent Manager.
 
-   > **Warning:** Deleting an environment is permanent and cannot be undone. Any agent deployed to the environment will no longer be reachable, and the deployment will be permanently deleted. Every agent's settings for the environment (CORS, endpoint authentication, and instrumentation settings) are deleted too, so an environment you create again with the same name starts from the defaults.
+   > **Warning:** Deleting an environment is permanent and cannot be undone. Any agent deployed to the environment will no longer be reachable, and the deployment will be permanently deleted.
 
 :::note
 An environment cannot be deleted while it is still referenced by a deployment pipeline. Remove it from any pipeline first.

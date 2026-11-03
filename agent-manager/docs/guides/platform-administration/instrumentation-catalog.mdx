@@ -2,8 +2,7 @@
 title: Managing Instrumentation Versions
 description: How a platform admin controls which amp-instrumentation versions an AMP install will offer to agent authors.  # generated from the first paragraph; a writer should improve it
 type: how-to
-sidebar_position: 6
-editions: self-hosted
+sidebar_position: 5
 ---
 
 How a platform admin controls which `amp-instrumentation` versions an AMP install will offer to agent authors. Internally this set is called the *instrumentation catalog*, and the rest of this page uses that name.
@@ -158,7 +157,7 @@ Bundled-baseline entries can't be removed via Helm; they ship with the AMP relea
 
 ## The platform default
 
-`OTEL_DEFAULT_INSTRUMENTATION_VERSION` (chart value: `agentManagerService.config.otel.defaultInstrumentationVersion`) is the version pre-selected on the create-agent form when a user doesn't override it. It defaults to `0.4.2`.
+`OTEL_DEFAULT_INSTRUMENTATION_VERSION` (chart value: `agentManagerService.config.otel.defaultInstrumentationVersion`) is the version pre-selected on the create-agent form when a user doesn't override it. It defaults to `0.4.1`.
 
 This value has to exist in the effective catalog at startup. If it doesn't, the server exits with:
 

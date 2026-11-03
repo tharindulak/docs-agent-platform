@@ -3,7 +3,6 @@ title: On Your Environment
 description: Set up a production-grade, single-cluster Agent Manager deployment on an existing Kubernetes cluster — AWS EKS, Google GKE, Azure AKS, or any distribution…  # generated from the first paragraph; a writer should improve it
 type: how-to
 sidebar_position: 2
-editions: self-hosted
 ---
 
 import Tabs from '@theme/Tabs';
@@ -115,13 +114,13 @@ Pick a base domain you control (a delegated subdomain like `amp.yourdomain.com` 
 
 Concretely: `console`/`api-amp`/`thunder`/`cp` all point at the control-plane gateway — via a single required `*.<base>` wildcard, not four separate records (per-environment Thunder hostnames are created after install and are only reachable through that wildcard) — `traces` points at the observability-plane gateway, and `*.agents.<base>` plus the `agents.<base>` apex point at the data-plane gateway. [Step 10](#step-10-publish-dns-records) lists the exact records once the LoadBalancer addresses exist.
 
-Download the release bundle first. Every manifest, values file and script this
+Download the release bundle once. Every manifest, values file and script this
 guide applies comes from it, so the install needs no further network access to
 GitHub — which also sidesteps the per-IP rate limiting that makes
 `helm --values <url>` fail with HTTP 429 behind shared or corporate NAT.
 
 ```bash
-export VERSION="0.0.0-dev"
+export VERSION="1.0.0"
 curl -fsSL -O "https://github.com/wso2/agent-manager/releases/download/amp/v${VERSION}/wso2-agent-manager-${VERSION}.tar.gz"
 tar xzf "wso2-agent-manager-${VERSION}.tar.gz"
 export AMP_DIST="$PWD"
@@ -170,7 +169,7 @@ Nothing to change. The charts come from `ghcr.io/wso2`.
 </TabItem>
 <TabItem value="subscription" label="WSO2 Subscription">
 
-Replace `<version>` and `<project>` with your values from [Install with a WSO2 Subscription](./install-with-a-wso2-subscription.mdx). The version is `0.0.0-dev` for the release, or `0.0.0-dev-u<N>` for update N. Phase 2 uses the same username and token to create the image pull secret.
+Replace `<version>` and `<project>` with your values from [Install with a WSO2 Subscription](./install-with-a-wso2-subscription.mdx). The version is `1.0.0` for the release, or `1.0.0-u<N>` for update N. Phase 2 uses the same username and token to create the image pull secret.
 
 ```bash
 export VERSION="<version>"
@@ -1067,10 +1066,6 @@ helm install openchoreo-workflow-plane \
   --namespace openchoreo-workflow-plane \
   --create-namespace \
   --set clusterAgent.tls.generateCerts=true \
-  --set argo-workflows.controller.resources.requests.cpu=50m \
-  --set argo-workflows.controller.resources.requests.memory=64Mi \
-  --set argo-workflows.controller.resources.limits.cpu=200m \
-  --set argo-workflows.controller.resources.limits.memory=128Mi \
   --timeout 600s
 
 kubectl wait --for=condition=Available \
@@ -1282,20 +1277,15 @@ helm upgrade observability-logs-opensearch \
   --set fluent-bit.enabled=true \
   --timeout 10m
 
-# Metrics module.
-#
-# The values file widens the kube-state-metrics label allowlist. Only labels on
-# that list reach the metrics store, and usage attribution needs them: without
-# it, build and evaluation pods are indistinguishable once collected and their
-# durations are summed into a single figure. It also keeps Prometheus on a
-# ClusterIP Service: the chart defaults to a LoadBalancer, which would put its
-# unauthenticated API on a public IP.
+# Metrics module
+# The chart defaults Prometheus to a LoadBalancer Service, which would put its
+# unauthenticated API on a public IP. Everything that queries it is in-cluster.
 helm upgrade --install observability-metrics-prometheus \
   oci://ghcr.io/openchoreo/helm-charts/observability-metrics-prometheus \
   --create-namespace \
   --namespace openchoreo-observability-plane \
   --version 0.6.1 \
-  --values "${AMP_DIST}/deployments/values/observability-metrics-prometheus.yaml" \
+  --set kube-prometheus-stack.prometheus.service.type=ClusterIP \
   --timeout 10m
 
 # Tracing module (uses the custom OTel Collector ConfigMap)

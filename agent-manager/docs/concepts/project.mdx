@@ -13,7 +13,7 @@ An Agent Manager Project is an [OpenChoreo Project](https://openchoreo.dev/docs/
 
 The grouping is more than a label. Each project's workloads run in their own Kubernetes namespace, provisioned for each project and environment pair, so agents in different projects do not share a runtime namespace.
 
-That separation is a runtime one rather than an access-control one. Permissions are granted organization-wide and not per project, so a role that can read or create agents in one project carries the same permission across every project in the organization. See <Edition only="self-hosted">[Authorization](../reference/authorization.mdx)</Edition><Edition only="cloud">Authorization</Edition> for the scopes that are actually evaluated. Use projects to organize related agents and to govern how they promote through environments, rather than to control which users can reach which agents.
+That separation is a runtime one rather than an access-control one. Permissions are granted organization-wide and not per project, so a role that can read or create agents in one project carries the same permission across every project in the organization. See [Authorization](../reference/authorization.mdx) for the scopes that are actually evaluated. Use projects to organize related agents and to govern how they promote through environments, rather than to control which users can reach which agents.
 
 ### How Agents Map to OpenChoreo Components
 

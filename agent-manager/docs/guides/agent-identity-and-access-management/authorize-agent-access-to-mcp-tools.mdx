@@ -36,11 +36,11 @@ The authorization mechanism is identical for every agent. The only difference is
 
 ## Prerequisites
 
-- `amctl` installed and logged in against your control plane if you follow the `amctl` path (see <Edition only="self-hosted">[CLI Installation](../installation/cli-installation.mdx)</Edition><Edition only="cloud">CLI Installation</Edition> and <Edition only="self-hosted">[`amctl login`](../../reference/cli/login.mdx)</Edition><Edition only="cloud">`amctl login`</Edition>).
+- `amctl` installed and logged in against your control plane if you follow the `amctl` path (see [CLI Installation](../installation/cli-installation.mdx) and [`amctl login`](../../reference/cli/login.mdx)).
 - An AI Gateway registered and active for the environment you are configuring.
 - A **GitHub Personal Access Token**. Read access is enough for `github:read`; add issue write access only if you want to exercise `github:write`. Create one at [github.com/settings/tokens](https://github.com/settings/tokens).
 
-This guide uses the <Edition only="self-hosted">[`amctl api`](../../reference/cli/api.mdx)</Edition><Edition only="cloud">`amctl api`</Edition> command to call the control plane directly, which makes every step precise and copy-pasteable. The examples use the `default` organization, `default` project, and `default` environment — substitute your own.
+This guide uses the [`amctl api`](../../reference/cli/api.mdx) command to call the control plane directly, which makes every step precise and copy-pasteable. The examples use the `default` organization, `default` project, and `default` environment — substitute your own.
 
 ---
 
@@ -229,6 +229,6 @@ Changing who can do what is now a matter of editing scopes and role assignments 
 
 ## Next steps
 
-- <Edition only="self-hosted">[Authorization](../../reference/authorization.mdx)</Edition><Edition only="cloud">Authorization</Edition> — the platform-wide scope and role model these agent scopes plug into.
+- [Authorization](../../reference/authorization.mdx) — the platform-wide scope and role model these agent scopes plug into.
 - [Register an MCP Proxy](../platform-administration/register-mcp-proxy.mdx) — the full proxy registration reference, including the Console flow.
 - [Configure Agent MCP Proxies](./configure-agent-mcp-proxies.mdx) — attach a proxy to an agent so it can call the tools.

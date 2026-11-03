@@ -3,7 +3,6 @@ title: On k3d (Locally)
 description: Install the Agent Manager on a local Kubernetes cluster using k3d — a lightweight tool that runs Kubernetes inside Docker.  # generated from the first paragraph; a writer should improve it
 type: how-to
 sidebar_position: 1
-editions: self-hosted
 ---
 
 import Tabs from '@theme/Tabs';
@@ -109,17 +108,17 @@ One script creates the cluster and installs every plane, plus Agent Manager:
 <TabItem value="community" label="Community" default>
 
 ```bash
-curl -fsSL https://github.com/wso2/agent-manager/releases/download/amp/v0.0.0-dev/k3d-install.sh | bash
+curl -fsSL https://github.com/wso2/agent-manager/releases/download/amp/v1.0.0/k3d-install.sh | bash
 ```
 
 </TabItem>
 <TabItem value="subscription" label="WSO2 Subscription">
 
 ```bash
-curl -fsSL https://github.com/wso2/agent-manager/releases/download/amp/v0.0.0-dev/k3d-install-subscription.sh | bash -s -- --project <project>
+curl -fsSL https://github.com/wso2/agent-manager/releases/download/amp/v1.0.0/k3d-install-subscription.sh | bash -s -- --project <project>
 ```
 
-Replace `<project>` with your registry project: `wso2-agent-manager-evaluations` for an evaluation, or `wso2-agent-manager` for a subscription. The script asks for your registry credentials and installs the newest version published to that project. To install a particular version, add `--version`, for example `--version 0.0.0-dev-u2`. See [Install with a WSO2 Subscription](./install-with-a-wso2-subscription.mdx#one-command) for its options.
+Replace `<project>` with your registry project: `wso2-agent-manager-evaluations` for an evaluation, or `wso2-agent-manager` for a subscription. The script asks for your registry credentials and installs the newest version published to that project. To install a particular version, add `--version`, for example `--version 1.0.0-u2`. See [Install with a WSO2 Subscription](./install-with-a-wso2-subscription.mdx#one-command) for its options.
 
 </TabItem>
 </Tabs>
@@ -127,7 +126,7 @@ Replace `<project>` with your registry project: `wso2-agent-manager-evaluations`
 The script:
 
 1. Checks that Docker is running and that k3d, kubectl, Helm, curl and lsof are installed.
-2. Downloads the `0.0.0-dev` release bundle into `~/.wso2-agent-manager/0.0.0-dev/`.
+2. Downloads the `1.0.0` release bundle into `~/.wso2-agent-manager/1.0.0/`.
 3. Creates the `amp-local` k3d cluster and installs the four OpenChoreo planes and Agent Manager. These are the same steps as the **Guided Install** tab.
 4. Prints the console URL and the `admin` login when it finishes.
 
@@ -159,7 +158,7 @@ GitHub — which also sidesteps the per-IP rate limiting that makes
 `helm --values <url>` fail with HTTP 429 behind shared or corporate NAT.
 
 ```bash
-export VERSION="0.0.0-dev"
+export VERSION="1.0.0"
 curl -fsSL -O "https://github.com/wso2/agent-manager/releases/download/amp/v${VERSION}/wso2-agent-manager-${VERSION}.tar.gz"
 tar xzf "wso2-agent-manager-${VERSION}.tar.gz"
 export AMP_DIST="$PWD"
@@ -308,7 +307,7 @@ EOF
 Set these variables before continuing. They are used by the remaining Phase 1 steps and all of Phase 2.
 
 ```bash
-export VERSION="0.0.0-dev"
+export VERSION="1.0.0"
 export HELM_CHART_REGISTRY="ghcr.io/wso2"
 export AMP_NS="wso2-amp"
 export BUILD_CI_NS="openchoreo-workflow-plane"
@@ -343,7 +342,7 @@ Nothing to change. The charts come from `ghcr.io/wso2`.
 </TabItem>
 <TabItem value="subscription" label="WSO2 Subscription">
 
-Replace `<version>` and `<project>` with your values from [Install with a WSO2 Subscription](./install-with-a-wso2-subscription.mdx). The version is `0.0.0-dev` for the release, or `0.0.0-dev-u<N>` for update N. Phase 2 uses the same username and token to create the image pull secret.
+Replace `<version>` and `<project>` with your values from [Install with a WSO2 Subscription](./install-with-a-wso2-subscription.mdx). The version is `1.0.0` for the release, or `1.0.0-u<N>` for update N. Phase 2 uses the same username and token to create the image pull secret.
 
 ```bash
 export VERSION="<version>"
@@ -557,10 +556,6 @@ helm install openchoreo-workflow-plane \
   --version 1.2.0 \
   --namespace openchoreo-workflow-plane \
   --create-namespace \
-  --set argo-workflows.controller.resources.requests.cpu=50m \
-  --set argo-workflows.controller.resources.requests.memory=64Mi \
-  --set argo-workflows.controller.resources.limits.cpu=200m \
-  --set argo-workflows.controller.resources.limits.memory=128Mi \
   --timeout 600s
 ```
 
@@ -1314,7 +1309,7 @@ kubectl get secret amp-admin-credentials -n amp-thunder -o jsonpath='{.data.pass
 ```
 
 :::note HTTPS ingest is disabled by default on this setup, and enabling it doesn't cover the documented hosts
-[values-dp.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/single-cluster/values-dp.yaml), installed in Step 8 of the guided install (the one-command installer applies the same file), sets `gateway.tls.enabled: false` even though it already configures `httpsPort: 19443` and a `certificateRefs` entry pointing at the `gateway-tls` Secret (created earlier by cert-manager). With TLS disabled, the Data Plane's `gateway-default` Gateway/Service only get an `http` listener — there is no 19443 listener to connect to, so an HTTPS OTLP endpoint is not reachable on a default install.
+[values-dp.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/single-cluster/values-dp.yaml), installed in Step 8 of the guided install (the one-command installer applies the same file), sets `gateway.tls.enabled: false` even though it already configures `httpsPort: 19443` and a `certificateRefs` entry pointing at the `gateway-tls` Secret (created earlier by cert-manager). With TLS disabled, the Data Plane's `gateway-default` Gateway/Service only get an `http` listener — there is no 19443 listener to connect to, so an HTTPS OTLP endpoint is not reachable on a default install.
 
 Turning `gateway.tls.enabled` on would not make the OTLP host above reachable over HTTPS anyway: `gateway-tls`'s certificate only covers `*.agentmanager.localhost` and `*.am-gateway.localhost` (its configured `hostname` and SANs), not `*.gateway.localhost` — the domain `default-default.gateway.localhost` above actually uses. Reaching HTTPS on that specific host would additionally require reissuing the certificate with `*.gateway.localhost` in its `dnsNames` and pointing `gateway.tls.hostname` at it.
 
@@ -1334,7 +1329,7 @@ k3d cluster delete amp-local
 If you used the one-command installer and want to remove Agent Manager and OpenChoreo but keep the cluster, run the uninstall script it left behind instead:
 
 ```bash
-bash ~/.wso2-agent-manager/0.0.0-dev/deployments/quick-start/uninstall.sh
+bash ~/.wso2-agent-manager/1.0.0/deployments/quick-start/uninstall.sh
 ```
 
 ---
@@ -1463,13 +1458,13 @@ All Agent Manager-specific configuration files used in this guide:
 
 | File | Purpose |
 |------|---------|
-| [k3d-config.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/quick-start/k3d-config.yaml) | k3d cluster with all required port mappings |
-| [coredns-amp-custom.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/k8s/coredns-amp-custom.yaml) | CoreDNS rewrites for `*.openchoreo.localhost`, `*.amp.localhost`, `*.agentmanager.localhost`, `*.am-gateway.localhost`, `*.gateway.localhost` |
-| [add-environment-thunder.sh](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/scripts/add-environment-thunder.sh) | Provisions the per-environment Thunder identity provider |
-| [values-cp.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/single-cluster/values-cp.yaml) | Control Plane — Backstage disabled, AMP Thunder OIDC |
-| [values-dp.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/single-cluster/values-dp.yaml) | Data Plane — gateway ports, Fluent Bit config |
-| [values-op.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/single-cluster/values-op.yaml) | Observability Plane — standalone OpenSearch, AMP Thunder OIDC |
-| [values-openbao.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/single-cluster/values-openbao.yaml) | OpenBao — dev mode, Kubernetes auth, pre-seeded secrets |
-| [oc-collector-configmap.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/values/oc-collector-configmap.yaml) | Custom OTel Collector ConfigMap for trace ingestion |
-| [wso2-amp-api-platform-gateway-extension](https://github.com/wso2/agent-manager/tree/amp/v0.0.0-dev/deployments/helm-charts/wso2-amp-api-platform-gateway-extension) | API Platform Gateway Helm chart (includes gateway config, bootstrap, CR) |
-| [otel-collector-rest-api.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v0.0.0-dev/deployments/values/otel-collector-rest-api.yaml) | OTel Collector REST API resource |
+| [k3d-config.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/quick-start/k3d-config.yaml) | k3d cluster with all required port mappings |
+| [coredns-amp-custom.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/k8s/coredns-amp-custom.yaml) | CoreDNS rewrites for `*.openchoreo.localhost`, `*.amp.localhost`, `*.agentmanager.localhost`, `*.am-gateway.localhost`, `*.gateway.localhost` |
+| [add-environment-thunder.sh](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/scripts/add-environment-thunder.sh) | Provisions the per-environment Thunder identity provider |
+| [values-cp.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/single-cluster/values-cp.yaml) | Control Plane — Backstage disabled, AMP Thunder OIDC |
+| [values-dp.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/single-cluster/values-dp.yaml) | Data Plane — gateway ports, Fluent Bit config |
+| [values-op.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/single-cluster/values-op.yaml) | Observability Plane — standalone OpenSearch, AMP Thunder OIDC |
+| [values-openbao.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/single-cluster/values-openbao.yaml) | OpenBao — dev mode, Kubernetes auth, pre-seeded secrets |
+| [oc-collector-configmap.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/values/oc-collector-configmap.yaml) | Custom OTel Collector ConfigMap for trace ingestion |
+| [wso2-amp-api-platform-gateway-extension](https://github.com/wso2/agent-manager/tree/amp/v1.0.0/deployments/helm-charts/wso2-amp-api-platform-gateway-extension) | API Platform Gateway Helm chart (includes gateway config, bootstrap, CR) |
+| [otel-collector-rest-api.yaml](https://raw.githubusercontent.com/wso2/agent-manager/amp/v1.0.0/deployments/values/otel-collector-rest-api.yaml) | OTel Collector REST API resource |

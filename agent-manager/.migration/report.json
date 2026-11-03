@@ -1,24 +1,22 @@
 {
   "summary": {
     "source": "wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add",
-    "edition": "cloud",
+    "edition": "1.0.0",
     "legacyBase": "https://wso2.com/agent-platform/docs/",
-    "navPages": 78,
+    "navPages": 71,
     "stats": {
-      "pages": 78,
+      "pages": 71,
       "partials": 0,
       "apiPages": 0,
-      "images": 17,
+      "images": 15,
       "acceptedByOverrides": 0,
       "cloudOnlyPages": 0,
       "inlinedPartials": 2,
       "unlisted": 0,
-      "linksRewritten": 397,
-      "linksMarked": 34
+      "linksRewritten": 351
     },
     "issues": {
       "dropped": 1,
-      "link-other-edition": 34,
       "partial-inlined": 2
     },
     "compileFailures": 0,
@@ -26,13 +24,6 @@
       "patches": 0,
       "patchesApplied": 0,
       "accepted": 0
-    },
-    "cloudDiff": {
-      "source": "wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add",
-      "matched": 37,
-      "identical": 10,
-      "differ": 27,
-      "cloudOnly": 0
     }
   },
   "items": [
@@ -40,51 +31,6 @@
       "kind": "dropped",
       "file": "contributing",
       "message": "left out: it explains how to edit the legacy Docusaurus repository; WSO2 Docs has Contribute for that"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "get-started/what-is-amp",
-      "message": "links to get-started/quick-start, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "concepts/organization",
-      "message": "links to reference/authorization, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "concepts/project",
-      "message": "links to reference/authorization, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "concepts/internal-and-external-agent",
-      "message": "links to guides/register-an-external-a2a-agent, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "concepts/observability",
-      "message": "links to reference/cli/agent, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "concepts/observability",
-      "message": "links to reference/observer-mcp-server, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "concepts/observability",
-      "message": "links to reference/cli/agent, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "concepts/evaluation",
-      "message": "links to guides/on-your-environment, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "concepts/agentid",
-      "message": "links to guides/configure-identity-providers-at-the-gateway, a self-hosted only page: the link text stays plain in cloud"
     },
     {
       "kind": "partial-inlined",
@@ -95,131 +41,6 @@
       "kind": "partial-inlined",
       "file": "guides/on-your-environment",
       "message": "guides/_partials/_amp-installation.mdx inlined with {\"version\":\"${VERSION}\",\"expandRegistryConfig\":true,\"production\":true}"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/deploy-an-a2a-agent",
-      "message": "links to guides/cli-installation, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/deploy-an-a2a-agent",
-      "message": "links to reference/cli/agent, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/deploy-an-a2a-agent",
-      "message": "links to guides/register-an-external-a2a-agent, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/custom-evaluators",
-      "message": "links to get-started/quick-start, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/evaluation-monitors",
-      "message": "links to get-started/quick-start, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/secure-agent-endpoints-with-api-keys",
-      "message": "links to guides/register-an-external-a2a-agent, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/secure-agents-with-jwt-authentication",
-      "message": "links to guides/configure-identity-providers-at-the-gateway, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/secure-agents-with-jwt-authentication",
-      "message": "links to guides/configure-identity-providers-at-the-gateway, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/secure-agents-with-jwt-authentication",
-      "message": "links to guides/configure-identity-providers-at-the-gateway, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/register-llm-service-provider",
-      "message": "links to reference/cli/llm-provider, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/environment-management",
-      "message": "links to guides/isolation-tiers/gvisor, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/environment-management",
-      "message": "links to guides/isolation-tiers/kata, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/amp-instrumentation",
-      "message": "links to reference/sample-agents, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/amp-instrumentation",
-      "message": "links to guides/instrumentation-catalog, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/amp-instrumentation",
-      "message": "links to guides/observe-openclaw-agents, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/authorize-agent-access-to-mcp-tools",
-      "message": "links to guides/cli-installation, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/authorize-agent-access-to-mcp-tools",
-      "message": "links to reference/cli/login, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/authorize-agent-access-to-mcp-tools",
-      "message": "links to reference/cli/api, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "guides/authorize-agent-access-to-mcp-tools",
-      "message": "links to reference/authorization, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "tutorials/create-your-first-agent",
-      "message": "links to get-started/quick-start, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "tutorials/promote-your-agent",
-      "message": "links to reference/authorization, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "tutorials/promote-your-agent",
-      "message": "links to reference/cli/overview, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "tutorials/deploy-the-a2a-notes-agent-sample",
-      "message": "links to get-started/quick-start, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "tutorials/deploy-the-a2a-notes-agent-sample",
-      "message": "links to guides/cli-installation, a self-hosted only page: the link text stays plain in cloud"
-    },
-    {
-      "kind": "link-other-edition",
-      "file": "tutorials/deploy-the-a2a-notes-agent-sample",
-      "message": "links to reference/sample-agents, a self-hosted only page: the link text stays plain in cloud"
     }
   ]
 }
