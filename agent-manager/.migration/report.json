@@ -1,11 +1,11 @@
 {
   "summary": {
-    "source": "wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add",
+    "source": "wso2/docs-agent-platform@2e90456b5f3a8899139c0c6c342a5738d8fc3919",
     "edition": "cloud",
     "legacyBase": "https://wso2.com/agent-platform/docs/",
-    "navPages": 78,
+    "navPages": 80,
     "stats": {
-      "pages": 78,
+      "pages": 80,
       "partials": 0,
       "apiPages": 0,
       "images": 17,
@@ -13,13 +13,14 @@
       "cloudOnlyPages": 0,
       "inlinedPartials": 2,
       "unlisted": 0,
-      "linksRewritten": 397,
-      "linksMarked": 34
+      "linksRewritten": 438,
+      "linksMarked": 40
     },
     "issues": {
       "dropped": 1,
-      "link-other-edition": 34,
-      "partial-inlined": 2
+      "link-other-edition": 40,
+      "partial-inlined": 2,
+      "partial": 2
     },
     "compileFailures": 0,
     "overrides": {
@@ -28,10 +29,10 @@
       "accepted": 0
     },
     "cloudDiff": {
-      "source": "wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add",
+      "source": "wso2/docs-agent-platform@2e90456b5f3a8899139c0c6c342a5738d8fc3919",
       "matched": 37,
-      "identical": 10,
-      "differ": 27,
+      "identical": 8,
+      "differ": 29,
       "cloudOnly": 0
     }
   },
@@ -58,8 +59,23 @@
     },
     {
       "kind": "link-other-edition",
+      "file": "concepts/agent-lifecycle",
+      "message": "links to guides/configure-agent-health-checks, a self-hosted only page: the link text stays plain in cloud"
+    },
+    {
+      "kind": "link-other-edition",
+      "file": "concepts/agent-lifecycle",
+      "message": "links to guides/configure-agent-health-checks, a self-hosted only page: the link text stays plain in cloud"
+    },
+    {
+      "kind": "link-other-edition",
       "file": "concepts/internal-and-external-agent",
       "message": "links to guides/register-an-external-a2a-agent, a self-hosted only page: the link text stays plain in cloud"
+    },
+    {
+      "kind": "link-other-edition",
+      "file": "concepts/agent-kind-and-catalog",
+      "message": "links to guides/configure-agent-health-checks, a self-hosted only page: the link text stays plain in cloud"
     },
     {
       "kind": "link-other-edition",
@@ -92,14 +108,29 @@
       "message": "guides/_partials/_amp-installation.mdx inlined with {\"version\":\"${VERSION}\",\"rewriteJwksForK3d\":true}"
     },
     {
+      "kind": "partial",
+      "file": "guides/on-k3d",
+      "message": "the installation partial still holds props.version, props.rewriteJwksForK3d, props.expandRegistryConfig, props.production after inlining"
+    },
+    {
       "kind": "partial-inlined",
       "file": "guides/on-your-environment",
       "message": "guides/_partials/_amp-installation.mdx inlined with {\"version\":\"${VERSION}\",\"expandRegistryConfig\":true,\"production\":true}"
     },
     {
+      "kind": "partial",
+      "file": "guides/on-your-environment",
+      "message": "the installation partial still holds props.version, props.rewriteJwksForK3d, props.expandRegistryConfig, props.production after inlining"
+    },
+    {
       "kind": "link-other-edition",
       "file": "guides/deploy-an-a2a-agent",
       "message": "links to guides/cli-installation, a self-hosted only page: the link text stays plain in cloud"
+    },
+    {
+      "kind": "link-other-edition",
+      "file": "guides/deploy-an-a2a-agent",
+      "message": "links to guides/configure-agent-health-checks, a self-hosted only page: the link text stays plain in cloud"
     },
     {
       "kind": "link-other-edition",
@@ -158,6 +189,11 @@
     },
     {
       "kind": "link-other-edition",
+      "file": "guides/environment-management",
+      "message": "links to guides/on-your-environment, a self-hosted only page: the link text stays plain in cloud"
+    },
+    {
+      "kind": "link-other-edition",
       "file": "guides/amp-instrumentation",
       "message": "links to reference/sample-agents, a self-hosted only page: the link text stays plain in cloud"
     },
@@ -195,6 +231,11 @@
       "kind": "link-other-edition",
       "file": "tutorials/create-your-first-agent",
       "message": "links to get-started/quick-start, a self-hosted only page: the link text stays plain in cloud"
+    },
+    {
+      "kind": "link-other-edition",
+      "file": "tutorials/create-your-first-agent",
+      "message": "links to guides/configure-agent-health-checks, a self-hosted only page: the link text stays plain in cloud"
     },
     {
       "kind": "link-other-edition",

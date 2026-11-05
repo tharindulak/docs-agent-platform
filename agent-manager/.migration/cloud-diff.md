@@ -1,20 +1,20 @@
 # Agent Manager: Cloud pages against the main line
 
-The main line is seeded from the source's Next tree (`docs`); pages found only in its Cloud snapshot (`versioned_docs/version-cloud`) are added and marked Cloud only. A Cloud page that the Next tree also has keeps Next's text on the main line, so the Cloud Edition shows Next's wording until the team reconciles the two. This report lists those pairs so the team can decide each one by PR. Imported from `wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add`.
+The main line is seeded from the source's Next tree (`docs`); pages found only in its Cloud snapshot (`versioned_docs/version-cloud`) are added and marked Cloud only. A Cloud page that the Next tree also has keeps Next's text on the main line, so the Cloud Edition shows Next's wording until the team reconciles the two. This report lists those pairs so the team can decide each one by PR. Imported from `wso2/docs-agent-platform@2e90456b5f3a8899139c0c6c342a5738d8fc3919`.
 
-- Pairs: 37 (10 identical, **27 differ**)
+- Pairs: 37 (8 identical, **29 differ**)
 - Cloud-only pages added: 0
 
 | Cloud page (legacy) | Main-line page | Word F1 | Lines +/− | |
 |---|---|---|---|---|
-| [concepts/agent-kind-and-catalog](https://wso2.com/agent-platform/docs/cloud/concepts/agent-kind-and-catalog/) | `docs/concepts/agent-kind-and-catalog.mdx` | 1.000 | 0 | identical |
-| [concepts/agent-lifecycle](https://wso2.com/agent-platform/docs/cloud/concepts/agent-lifecycle/) | `docs/concepts/agent-lifecycle.mdx` | 0.910 | +6 / −4 | **differs** |
+| [concepts/agent-kind-and-catalog](https://wso2.com/agent-platform/docs/cloud/concepts/agent-kind-and-catalog/) | `docs/concepts/agent-kind-and-catalog.mdx` | 0.887 | +0 / −2 | **differs** |
+| [concepts/agent-lifecycle](https://wso2.com/agent-platform/docs/cloud/concepts/agent-lifecycle/) | `docs/concepts/agent-lifecycle.mdx` | 0.859 | +7 / −6 | **differs** |
 | [concepts/agentid](https://wso2.com/agent-platform/docs/cloud/concepts/agentid/) | `docs/concepts/agentid.mdx` | 0.942 | +5 / −14 | **differs** |
 | [concepts/deployment-pipeline](https://wso2.com/agent-platform/docs/cloud/concepts/deployment-pipeline/) | `docs/concepts/deployment-pipeline.mdx` | 0.827 | +2 / −2 | **differs** |
 | [concepts/environment](https://wso2.com/agent-platform/docs/cloud/concepts/environment/) | `docs/concepts/environment.mdx` | 1.000 | 0 | identical |
 | [concepts/evaluation](https://wso2.com/agent-platform/docs/cloud/concepts/evaluation/) | `docs/concepts/evaluation.mdx` | 0.995 | +1 / −1 | **differs** |
 | [concepts/gateway](https://wso2.com/agent-platform/docs/cloud/concepts/gateway/) | `docs/concepts/gateway.mdx` | 1.000 | 0 | identical |
-| [concepts/internal-and-external-agent](https://wso2.com/agent-platform/docs/cloud/concepts/internal-and-external-agent/) | `docs/concepts/internal-and-external-agent.mdx` | 0.957 | +0 / −1 | **differs** |
+| [concepts/internal-and-external-agent](https://wso2.com/agent-platform/docs/cloud/concepts/internal-and-external-agent/) | `docs/concepts/internal-and-external-agent.mdx` | 0.931 | +0 / −1 | **differs** |
 | [concepts/llm-service-provider](https://wso2.com/agent-platform/docs/cloud/concepts/llm-service-provider/) | `docs/concepts/llm-service-provider.mdx` | 1.000 | 0 | identical |
 | [concepts/mcp-proxy](https://wso2.com/agent-platform/docs/cloud/concepts/mcp-proxy/) | `docs/concepts/mcp-proxy.mdx` | 0.965 | +1 / −3 | **differs** |
 | [concepts/observability](https://wso2.com/agent-platform/docs/cloud/concepts/observability/) | `docs/concepts/observability.mdx` | 0.785 | +2 / −43 | **differs** |
@@ -28,17 +28,17 @@ The main line is seeded from the source's Next tree (`docs`); pages found only i
 | [guides/configure-cors-for-agent-endpoints](https://wso2.com/agent-platform/docs/cloud/guides/configure-cors-for-agent-endpoints/) | `docs/guides/securing-agent-endpoints/configure-cors-for-agent-endpoints.mdx` | 1.000 | 0 | identical |
 | [guides/configure-trace-sampling](https://wso2.com/agent-platform/docs/cloud/guides/configure-trace-sampling/) | `docs/guides/evaluation-and-observability/configure-trace-sampling.mdx` | 1.000 | 0 | identical |
 | [guides/custom-evaluators](https://wso2.com/agent-platform/docs/cloud/guides/custom-evaluators/) | `docs/guides/evaluation-and-observability/custom-evaluators.mdx` | 0.986 | +1 / −1 | **differs** |
-| [guides/deploy-an-a2a-agent](https://wso2.com/agent-platform/docs/cloud/guides/deploy-an-a2a-agent/) | `docs/guides/deploy-an-a2a-agent.mdx` | 0.857 | +2 / −53 | **differs** |
-| [guides/environment-management](https://wso2.com/agent-platform/docs/cloud/guides/environment-management/) | `docs/guides/platform-administration/environment-management.mdx` | 0.637 | +26 / −109 | **differs** |
+| [guides/deploy-an-a2a-agent](https://wso2.com/agent-platform/docs/cloud/guides/deploy-an-a2a-agent/) | `docs/guides/deploy-an-a2a-agent.mdx` | 0.841 | +3 / −55 | **differs** |
+| [guides/environment-management](https://wso2.com/agent-platform/docs/cloud/guides/environment-management/) | `docs/guides/platform-administration/environment-management.mdx` | 0.585 | +26 / −129 | **differs** |
 | [guides/evaluation-monitors](https://wso2.com/agent-platform/docs/cloud/guides/evaluation-monitors/) | `docs/guides/evaluation-and-observability/evaluation-monitors.mdx` | 0.988 | +1 / −1 | **differs** |
 | [guides/register-llm-service-provider](https://wso2.com/agent-platform/docs/cloud/guides/register-llm-service-provider/) | `docs/guides/platform-administration/register-llm-service-provider.mdx` | 0.969 | +3 / −3 | **differs** |
 | [guides/register-mcp-proxy](https://wso2.com/agent-platform/docs/cloud/guides/register-mcp-proxy/) | `docs/guides/platform-administration/register-mcp-proxy.mdx` | 0.992 | +2 / −2 | **differs** |
 | [guides/retrieve-agentid-for-externally-hosted-agents](https://wso2.com/agent-platform/docs/cloud/guides/retrieve-agentid-for-externally-hosted-agents/) | `docs/guides/agent-identity-and-access-management/retrieve-agentid-for-externally-hosted-agents.mdx` | 1.000 | 0 | identical |
-| [guides/secure-agent-endpoints-with-api-keys](https://wso2.com/agent-platform/docs/cloud/guides/secure-agent-endpoints-with-api-keys/) | `docs/guides/securing-agent-endpoints/secure-agent-endpoints-with-api-keys.mdx` | 0.971 | +0 / −2 | **differs** |
+| [guides/secure-agent-endpoints-with-api-keys](https://wso2.com/agent-platform/docs/cloud/guides/secure-agent-endpoints-with-api-keys/) | `docs/guides/securing-agent-endpoints/secure-agent-endpoints-with-api-keys.mdx` | 0.966 | +0 / −2 | **differs** |
 | [guides/secure-agents-with-jwt-authentication](https://wso2.com/agent-platform/docs/cloud/guides/secure-agents-with-jwt-authentication/) | `docs/guides/securing-agent-endpoints/secure-agents-with-jwt-authentication.mdx` | 0.984 | +3 / −3 | **differs** |
 | [guides/use-agentid-in-platform-hosted-agents](https://wso2.com/agent-platform/docs/cloud/guides/use-agentid-in-platform-hosted-agents/) | `docs/guides/agent-identity-and-access-management/use-agentid-in-platform-hosted-agents.mdx` | 0.912 | +29 / −46 | **differs** |
-| [tutorials/build-a-ballerina-agent](https://wso2.com/agent-platform/docs/cloud/tutorials/build-a-ballerina-agent/) | `docs/tutorials/build-a-ballerina-agent.mdx` | 1.000 | 0 | identical |
-| [tutorials/create-your-first-agent](https://wso2.com/agent-platform/docs/cloud/tutorials/create-your-first-agent/) | `docs/tutorials/create-your-first-agent.mdx` | 0.962 | +16 / −21 | **differs** |
+| [tutorials/build-a-ballerina-agent](https://wso2.com/agent-platform/docs/cloud/tutorials/build-a-ballerina-agent/) | `docs/tutorials/build-a-ballerina-agent.mdx` | 0.994 | +2 / −2 | **differs** |
+| [tutorials/create-your-first-agent](https://wso2.com/agent-platform/docs/cloud/tutorials/create-your-first-agent/) | `docs/tutorials/create-your-first-agent.mdx` | 0.957 | +16 / −25 | **differs** |
 | [tutorials/deploy-the-a2a-notes-agent-sample](https://wso2.com/agent-platform/docs/cloud/tutorials/deploy-the-a2a-notes-agent-sample/) | `docs/tutorials/deploy-the-a2a-notes-agent-sample.mdx` | 0.933 | +1 / −36 | **differs** |
 | [tutorials/give-the-agent-real-tools](https://wso2.com/agent-platform/docs/cloud/tutorials/give-the-agent-real-tools/) | `docs/tutorials/give-the-agent-real-tools.mdx` | 1.000 | 0 | identical |
 | [tutorials/govern-the-model](https://wso2.com/agent-platform/docs/cloud/tutorials/govern-the-model/) | `docs/tutorials/govern-the-model.mdx` | 0.954 | +10 / −30 | **differs** |
@@ -49,16 +49,42 @@ The main line is seeded from the source's Next tree (`docs`); pages found only i
 
 Each diff reads from the main-line text (`-`) to the Cloud text (`+`), front matter left out.
 
+### concepts/agent-kind-and-catalog
+
+Main-line page `docs/concepts/agent-kind-and-catalog.mdx`; word F1 0.887.
+
+<details><summary>Diff</summary>
+
+```diff
+--- main line: concepts/agent-kind-and-catalog.mdx
++++ Cloud: concepts/agent-kind-and-catalog.mdx
+@@ -7,6 +7,4 @@ An **Agent Kind** is a reusable, versioned agent template. A way to publish a bu
+ A kind is versioned and each version pins a specific build (a `buildName` and `imageId`) plus a **config schema**. The list of parameters a consumer must (or may) provide when creating an agent from that version, each marked as secret or not, mandatory or not, with an optional default value.
+ 
+-A version also carries the [health checks](../guides/configure-agent-health-checks.mdx) its build recorded, and every agent created from that version starts with them. Changing the source agent's health checks later does not change the version, so its agents keep checks that match its image. A version published from a build made before health checks were configurable gives its agents the defaults.
+-
+ 
+ ## Agent Catalog
+```
+
+</details>
+
 ### concepts/agent-lifecycle
 
-Main-line page `docs/concepts/agent-lifecycle.mdx`; word F1 0.910.
+Main-line page `docs/concepts/agent-lifecycle.mdx`; word F1 0.859.
 
 <details><summary>Diff</summary>
 
 ```diff
 --- main line: concepts/agent-lifecycle.mdx
 +++ Cloud: concepts/agent-lifecycle.mdx
-@@ -21,9 +21,11 @@ Moving an agent from registered to running in production is a sequence of distin
+@@ -11,5 +11,4 @@ An agent's definition combines several pieces, each independently configurable:
+ - **Build** — the build strategy: `buildpack` (language + start command, e.g. Python) or `docker` (a `Dockerfile` in the repository).
+ - **Configurations** — runtime settings: auto-instrumentation, environment variables, API key / OAuth security, CORS, and resilience timeouts.
+-- **Health checks**: for platform-hosted agents, the startup, readiness, and liveness checks the platform runs on the agent. Each build records them, runs with them in every environment it reaches, and keeps them when it is promoted or deployed again. See [Configure Agent Health Checks](../guides/configure-agent-health-checks.mdx).
+ - **Kind** — optionally, an agent can be created from a published [Agent Kind](./agent-kind-and-catalog.mdx) rather than a raw repository.
+ 
+@@ -22,9 +21,11 @@ Moving an agent from registered to running in production is a sequence of distin
  | Create | `amp:agent:create` | Registers the agent in a project. |
  | Build | `amp:agent:build` | Builds a deployable artifact from the agent's source (platform-hosted only). |
 -| Deploy | `amp:agent:env-non-production` | Deploys a built artifact to the lowest [environment](./environment.mdx) in the project's [pipeline](./deployment-pipeline.mdx). Needs `amp:agent:env-production` **as well** if that environment is flagged as production. |
@@ -74,6 +100,13 @@ Main-line page `docs/concepts/agent-lifecycle.mdx`; word F1 0.910.
 +Splitting production deploys from non-production ones means someone can be trusted to push to staging without being trusted to push straight to production — the same separation the [deployment pipeline](./deployment-pipeline.mdx) enforces at the environment level.
  
  ## Deployment Status Per Environment
+@@ -35,5 +36,5 @@ An agent's deployment status is tracked independently for each environment it ta
+ |---|---|
+ | `active` | Deployed and able to serve traffic. |
+-| `in-progress` | A deployment is under way — either still rolling out, or applied but with pods that haven't passed their [readiness check](../guides/configure-agent-health-checks.mdx) yet. |
++| `in-progress` | A deployment is under way — either still rolling out, or applied but with pods that haven't passed their readiness probe yet. |
+ | `failed` | The deployment did not come up successfully. |
+ | `not-deployed` | The agent has never been deployed to this environment. |
 ```
 
 </details>
@@ -176,7 +209,7 @@ Main-line page `docs/concepts/evaluation.mdx`; word F1 0.995.
 
 ### concepts/internal-and-external-agent
 
-Main-line page `docs/concepts/internal-and-external-agent.mdx`; word F1 0.957.
+Main-line page `docs/concepts/internal-and-external-agent.mdx`; word F1 0.931.
 
 <details><summary>Diff</summary>
 
@@ -186,7 +219,7 @@ Main-line page `docs/concepts/internal-and-external-agent.mdx`; word F1 0.957.
 @@ -17,5 +17,4 @@ The practical differences that follow from this:
  - **No deploy or promote step.** There's nothing for the platform to deploy, so [AgentID](./agentid.mdx) credential provisioning for every environment in the organization begins as soon as the agent is registered, rather than being tied to a deploy.
  - **You wire configuration in yourself.** Since there's no pod to inject into, the platform instead hands you connection details to configure — an API key and OTel endpoint for instrumentation, and endpoint URLs plus API keys for any LLM Service Provider or MCP Proxy the agent uses.
--- **Callers reach it at its own address.** The exception is an externally-hosted A2A agent, which can be routed through an environment's gateway so that gateway API keys, CORS, and authentication apply to it. See [Register an External A2A Agent](../guides/register-an-external-a2a-agent.mdx).
+-- **Callers reach it at its own address.** The exception is an externally-hosted agent that serves the A2A protocol. There is no separate A2A type for externally-hosted agents: any of them can register an A2A agent card URL per environment, and an environment with a card URL can be routed through its gateway so that gateway API keys, CORS, and authentication apply to it. See [Register an External A2A Agent](../guides/register-an-external-a2a-agent.mdx).
  - **Observability requires instrumenting it.** No traces appear until the agent is connected via the `amp-instrumentation` package (or the manual `init_otel()` path) — see [AMP Instrumentation](../guides/amp-instrumentation.mdx).
  
 ```
@@ -896,7 +929,7 @@ Main-line page `docs/guides/evaluation-and-observability/custom-evaluators.mdx`;
 
 ### guides/deploy-an-a2a-agent
 
-Main-line page `docs/guides/deploy-an-a2a-agent.mdx`; word F1 0.857.
+Main-line page `docs/guides/deploy-an-a2a-agent.mdx`; word F1 0.841.
 
 <details><summary>Diff</summary>
 
@@ -923,7 +956,13 @@ Main-line page `docs/guides/deploy-an-a2a-agent.mdx`; word F1 0.857.
 -
  1. Open your project and click **Add Agent**.
  2. Choose **Platform-Hosted Agent**, then **Source Code** as the source type.
-@@ -43,36 +36,4 @@ Clients reach the agent only through the gateway, so the gateway's CORS and auth
+@@ -39,41 +32,8 @@ Clients reach the agent only through the gateway, so the gateway's CORS and auth
+ 4. Under **Agent Type**, choose **A2A Agent**.
+ 5. In **Port**, enter the port your agent's A2A server listens on.
+-6. Optional: in the **Readiness check** section, set **Type** to **HTTP GET** and keep the **Path** as `/.well-known/agent-card.json`. The agent then gets traffic only once it serves its card. See [Configure Agent Health Checks](./configure-agent-health-checks.mdx).
+-7. Add the agent's environment variables, then click **Deploy**.
++6. Add the agent's environment variables, then click **Deploy**.
+ 
  There is no **OpenAPI Spec Path** or **Base Path** field for an A2A agent. It needs only a port.
  
 -</TabItem>
@@ -960,7 +999,7 @@ Main-line page `docs/guides/deploy-an-a2a-agent.mdx`; word F1 0.857.
 -
  :::note The A2A choice is permanent
  You can switch an agent between **Chat Agent** and **Custom API Agent** later, but not into or out of **A2A Agent**. To change an A2A agent into another type, create a new agent.
-@@ -113,16 +74,5 @@ There is no **Request Timeout** section for an A2A agent. A timeout would cut of
+@@ -114,16 +74,5 @@ There is no **Request Timeout** section for an A2A agent. A timeout would cut of
  Saving these settings republishes the agent to the gateway. Promoting the agent to another environment publishes it there too.
  
 -## Step 3: Check the Agent Card
@@ -978,7 +1017,7 @@ Main-line page `docs/guides/deploy-an-a2a-agent.mdx`; word F1 0.857.
 +## Step 3: Call the Agent
  
  The **Try It** page cannot call an A2A agent. It shows "Testing isn't available for A2A agents yet". Use an A2A client or `curl` instead.
-@@ -157,5 +107,4 @@ An A2A client can instead fetch the card from `<invoke-url>/.well-known/agent-ca
+@@ -158,5 +107,4 @@ An A2A client can instead fetch the card from `<invoke-url>/.well-known/agent-ca
  
  - [Deploy the A2A Notes Agent Sample](../tutorials/deploy-the-a2a-notes-agent-sample.mdx): deploy a working A2A agent end to end.
 -- [Register an External A2A Agent](./register-an-external-a2a-agent.mdx): bring an A2A agent that runs outside Agent Manager, and route it through the gateway.
@@ -990,7 +1029,7 @@ Main-line page `docs/guides/deploy-an-a2a-agent.mdx`; word F1 0.857.
 
 ### guides/environment-management
 
-Main-line page `docs/guides/platform-administration/environment-management.mdx`; word F1 0.637.
+Main-line page `docs/guides/platform-administration/environment-management.mdx`; word F1 0.585.
 
 <details><summary>Diff</summary>
 
@@ -1013,7 +1052,7 @@ Main-line page `docs/guides/platform-administration/environment-management.mdx`;
 -
  1. Click **Create Environment**.
  2. Fill in the environment details.
-@@ -36,77 +32,27 @@ Environments are provisioned by a script that creates the environment in Agent M
+@@ -36,93 +32,27 @@ Environments are provisioned by a script that creates the environment in Agent M
     | Field | Description | Example |
     |---|---|---|
 -   | **Display Name** | Human-readable name shown throughout the Console. | `Production` |
@@ -1051,17 +1090,33 @@ Main-line page `docs/guides/platform-administration/environment-management.mdx`;
 -```
 -
 -Agents deployed or promoted to that environment automatically run under the tier's runtime — no agent-side changes are needed.
+-
+-### Thunder storage
+-
+-Each environment's ThunderID keeps its data in SQLite on a volume by default, with an in-memory cache and one replica. To use your own PostgreSQL and Redis, or to run more than one replica, set the storage variables on the command before you run it. The Console does not set them for you. [Prepare Storage for the Environment's Thunder](./on-your-environment.mdx#prepare-storage-for-the-environments-thunder) lists the variables and shows how to prepare the databases:
+-
+-```bash
+-THUNDER_DB_TYPE=postgres \
+-THUNDER_DB_HOST=your-db.example.com \
+-THUNDER_DB_USER=thunder_prod \
+-THUNDER_DB_PASSWORD='<password>' \
+-THUNDER_DB_NAME_PREFIX=th_prod_ \
+-  ENV_NAME=... DISPLAY_NAME=... AGENT_MANAGER_TOKEN=... \
+-  bash add-environment.sh
+-```
 +   | **Display Name** *(required)* | Human-readable name shown throughout the Console. | `Production` |
 +   | **Name** | The resource name used by the API. Generated automatically from the display name and guaranteed unique. | `production` |
 +   | **Production environment** | Mark this environment as production. Production environments are typically the last stage of a pipeline, and deploying to one requires a [separate permission](../concepts/organization.mdx). | — |
  
--### Gateway topology
+-The database is chosen when the environment is first created. The script blocks database changes because a new database would be empty; only use `THUNDER_FORCE_STORAGE_CHANGE=true` after you have migrated the data yourself. The cache type and the replica count can be changed by running the script again, but a run applies exactly the values you pass, so pass the full set each time. If the settings do not fit together, the script stops with a message before it creates the environment. If the ThunderID step fails later, it also stops, instead of falling back to the shared ThunderID.
 +3. Click **Create**.
  
--Every environment gets an API Platform Gateway. Its **topology** decides whether one gateway handles both directions of traffic, or two gateways split the roles — an *ingress* gateway for traffic arriving at the agents deployed in the environment, and an *egress* gateway for the calls those agents make out to LLMs, MCP servers, and other APIs.
+-### Gateway topology
 +Agent Manager provisions the environment and installs its API Platform Gateway for
 +you. Once created, the new environment appears in the list.
  
+-Every environment gets an API Platform Gateway. Its **topology** decides whether one gateway handles both directions of traffic, or two gateways split the roles — an *ingress* gateway for traffic arriving at the agents deployed in the environment, and an *egress* gateway for the calls those agents make out to LLMs, MCP servers, and other APIs.
+-
 -| Topology | Helm releases installed | Namespaces | Registered gateway type |
 -|---|---|---|---|
 -| `single` (default) | `api-platform-<org>-<env>` | `<org>-<env>` | `BOTH` |
@@ -1104,7 +1159,13 @@ Main-line page `docs/guides/platform-administration/environment-management.mdx`;
 +   > **Warning:** Deleting an environment is permanent and cannot be undone. Any agent deployed to the environment will no longer be reachable, and the deployment will be permanently deleted.
  
  :::note
-@@ -116,46 +62,17 @@ An environment cannot be deleted while it is still referenced by a deployment pi
+@@ -130,52 +60,19 @@ An environment cannot be deleted while it is still referenced by a deployment pi
+ :::
+ 
+-:::note
+-If the environment's ThunderID uses your own PostgreSQL, deleting the environment does not drop its databases. The command lists them when it finishes. To create the environment again, drop and recreate them, or use a new `THUNDER_DB_NAME_PREFIX`.
+-:::
+-
  ### Access the Environment ThunderID Console
  
 -Creating an environment does more than register it in Agent Manager. The same command also
@@ -1250,7 +1311,7 @@ Main-line page `docs/guides/platform-administration/register-mcp-proxy.mdx`; wor
 
 ### guides/secure-agent-endpoints-with-api-keys
 
-Main-line page `docs/guides/securing-agent-endpoints/secure-agent-endpoints-with-api-keys.mdx`; word F1 0.971.
+Main-line page `docs/guides/securing-agent-endpoints/secure-agent-endpoints-with-api-keys.mdx`; word F1 0.966.
 
 <details><summary>Diff</summary>
 
@@ -1260,7 +1321,7 @@ Main-line page `docs/guides/securing-agent-endpoints/secure-agent-endpoints-with
 @@ -5,6 +5,4 @@ API key security protects platform-hosted API agent endpoints at the gateway. Wh
  API key security is enabled by default for API agents. You can turn it off or on when deploying the agent, and you can create and revoke keys from **Credentials** under the **SECURITY** section in the agent sidebar.
  
--An externally-hosted A2A agent can use agent API keys too, once it is routed through the environment's gateway. See [Register an External A2A Agent](./register-an-external-a2a-agent.mdx).
+-An externally-hosted agent can use agent API keys too, once it registers an A2A agent card URL and is routed through the environment's gateway. See [Register an External A2A Agent](./register-an-external-a2a-agent.mdx).
 -
  ## Prerequisites
  
@@ -1438,9 +1499,36 @@ Main-line page `docs/guides/agent-identity-and-access-management/use-agentid-in-
 
 </details>
 
+### tutorials/build-a-ballerina-agent
+
+Main-line page `docs/tutorials/build-a-ballerina-agent.mdx`; word F1 0.994.
+
+<details><summary>Diff</summary>
+
+```diff
+--- main line: tutorials/build-a-ballerina-agent.mdx
++++ Cloud: tutorials/build-a-ballerina-agent.mdx
+@@ -156,5 +156,5 @@ Review your settings and click **Deploy**. The build compiles the sample and pac
+ 5. Click **Register**.
+ 
+-The **Setup Agent** panel opens. In the top right, set **Language** to **Ballerina** and **Version** to your Ballerina version (`2201.13.x` or `2201.14.x+`) to see the **Zero-code Instrumentation Guide** for it. Keep the panel open, since you need the API key and endpoint it shows in the steps below. If you close it, reopen it with **Setup Agent** on the agent's overview page.
++The **Setup Agent** panel opens. Set **Language** to **Ballerina** in the top right to see the **Zero-code Instrumentation Guide** for Ballerina. Keep the panel open, since you need the API key and endpoint it shows in the steps below. If you close it, reopen it with **Setup Agent** on the agent's overview page.
+ 
+ ### Step 2: Get the Sample Code
+@@ -243,5 +243,5 @@ export BAL_CONFIG_VAR_OPENAIAPIKEY="<your-openai-api-key>"
+ ```
+ 
+-The first two lines match step 4 of the Setup Agent panel when **Version** is `2201.14.x+`, so you can copy them from there. The endpoint ends in `/v1/traces` because the built-in exporter sends to the exact address you give it. The API key travels in the `x-amp-api-key` header.
++The Setup Agent panel shows the `2201.13.x` variable names, so type these instead. Add `/v1/traces` to the end of the endpoint. The built-in exporter sends to the exact address you give it. The API key travels in the `x-amp-api-key` header.
+ 
+ </TabItem>
+```
+
+</details>
+
 ### tutorials/create-your-first-agent
 
-Main-line page `docs/tutorials/create-your-first-agent.mdx`; word F1 0.962.
+Main-line page `docs/tutorials/create-your-first-agent.mdx`; word F1 0.957.
 
 <details><summary>Diff</summary>
 
@@ -1499,6 +1587,15 @@ Main-line page `docs/tutorials/create-your-first-agent.mdx`; word F1 0.962.
 +now.
  
  If the project has no agents yet, you land directly on the **Add a New Agent**
+@@ -126,8 +121,4 @@ what the sample's `app.py` serves. Picking **Custom API Agent** here would make
+ the console expect an OpenAPI spec instead.
+ 
+-Leave the **Readiness check** **Type** on **TCP**. It decides when the agent starts getting
+-traffic; see [Configure Agent Health Checks](../guides/configure-agent-health-checks.mdx)
+-to change it later.
+-
+ ### Environment Variables
+ 
 ```
 
 </details>

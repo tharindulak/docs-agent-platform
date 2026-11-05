@@ -1,29 +1,29 @@
 {
   "summary": {
-    "source": "wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add",
+    "source": "wso2/docs-agent-platform@2e90456b5f3a8899139c0c6c342a5738d8fc3919",
     "matched": 37,
-    "identical": 10,
-    "differ": 27,
+    "identical": 8,
+    "differ": 29,
     "cloudOnly": 0
   },
   "pages": [
     {
       "id": "concepts/agent-kind-and-catalog",
       "page": "concepts/agent-kind-and-catalog",
-      "identical": true,
-      "f1": 1,
+      "identical": false,
+      "f1": 0.887,
       "cloudUrl": "https://wso2.com/agent-platform/docs/cloud/concepts/agent-kind-and-catalog/",
       "added": 0,
-      "removed": 0
+      "removed": 2
     },
     {
       "id": "concepts/agent-lifecycle",
       "page": "concepts/agent-lifecycle",
       "identical": false,
-      "f1": 0.91,
+      "f1": 0.859,
       "cloudUrl": "https://wso2.com/agent-platform/docs/cloud/concepts/agent-lifecycle/",
-      "added": 6,
-      "removed": 4
+      "added": 7,
+      "removed": 6
     },
     {
       "id": "concepts/agentid",
@@ -74,7 +74,7 @@
       "id": "concepts/internal-and-external-agent",
       "page": "concepts/internal-and-external-agent",
       "identical": false,
-      "f1": 0.957,
+      "f1": 0.931,
       "cloudUrl": "https://wso2.com/agent-platform/docs/cloud/concepts/internal-and-external-agent/",
       "added": 0,
       "removed": 1
@@ -200,19 +200,19 @@
       "id": "guides/deploy-an-a2a-agent",
       "page": "guides/deploy-an-a2a-agent",
       "identical": false,
-      "f1": 0.857,
+      "f1": 0.841,
       "cloudUrl": "https://wso2.com/agent-platform/docs/cloud/guides/deploy-an-a2a-agent/",
-      "added": 2,
-      "removed": 53
+      "added": 3,
+      "removed": 55
     },
     {
       "id": "guides/environment-management",
       "page": "guides/platform-administration/environment-management",
       "identical": false,
-      "f1": 0.637,
+      "f1": 0.585,
       "cloudUrl": "https://wso2.com/agent-platform/docs/cloud/guides/environment-management/",
       "added": 26,
-      "removed": 109
+      "removed": 129
     },
     {
       "id": "guides/evaluation-monitors",
@@ -254,7 +254,7 @@
       "id": "guides/secure-agent-endpoints-with-api-keys",
       "page": "guides/securing-agent-endpoints/secure-agent-endpoints-with-api-keys",
       "identical": false,
-      "f1": 0.971,
+      "f1": 0.966,
       "cloudUrl": "https://wso2.com/agent-platform/docs/cloud/guides/secure-agent-endpoints-with-api-keys/",
       "added": 0,
       "removed": 2
@@ -280,20 +280,20 @@
     {
       "id": "tutorials/build-a-ballerina-agent",
       "page": "tutorials/build-a-ballerina-agent",
-      "identical": true,
-      "f1": 1,
+      "identical": false,
+      "f1": 0.994,
       "cloudUrl": "https://wso2.com/agent-platform/docs/cloud/tutorials/build-a-ballerina-agent/",
-      "added": 0,
-      "removed": 0
+      "added": 2,
+      "removed": 2
     },
     {
       "id": "tutorials/create-your-first-agent",
       "page": "tutorials/create-your-first-agent",
       "identical": false,
-      "f1": 0.962,
+      "f1": 0.957,
       "cloudUrl": "https://wso2.com/agent-platform/docs/cloud/tutorials/create-your-first-agent/",
       "added": 16,
-      "removed": 21
+      "removed": 25
     },
     {
       "id": "tutorials/deploy-the-a2a-notes-agent-sample",
