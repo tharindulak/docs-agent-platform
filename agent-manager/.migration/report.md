@@ -1,6 +1,6 @@
 # Import report: Agent Manager 1.0.0
 
-Imported from `wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add` by the Docusaurus importer (migration/lib/docusaurus.mjs in wso2/docs-platform).
+Imported from `wso2/docs-agent-platform@2e90456b5f3a8899139c0c6c342a5738d8fc3919` by the Docusaurus importer (migration/lib/docusaurus.mjs in wso2/docs-platform).
 
 | Measure | Count |
 |---|---|
@@ -11,7 +11,7 @@ Imported from `wso2/docs-agent-platform@5278a51b2e7d5cd7681e81d3270ac536cf860add
 | Partials inlined | 2 |
 | Partials copied | 0 |
 | Images and files | 15 |
-| Links re-pointed | 351 |
+| Links re-pointed | 357 |
 | Links marked for one Edition | 0 |
 | MDX compile failures | 0 |
 
