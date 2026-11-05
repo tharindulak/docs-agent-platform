@@ -5,15 +5,16 @@
 #   docspace.yaml)                -> Cloud: [<doc space>/]cloud-<YYYY.MM.DD>.<n>
 #   [<doc space>/]release/<version> -> that version: [<doc space>/]<version>-docs.<n>
 # It runs the Doc space's blocking checks, packs the Docs bundle, tags the
-# branch's commit, attaches the bundle to a GitHub Release, and tells the
-# Platform (repository_dispatch `docs-release`, a hint: the Platform reads
+# branch's commit, attaches the bundle to a GitHub Release, and starts the
+# Platform's Intake (workflow_dispatch with repo and tag, a hint: Intake reads
 # the release itself).
 #
 # Needs: immutable releases on (Settings > General > Releases); the WSO2 Docs
 # Release App, installed only on the Platform repo with Contents: read and
-# write, its ID in the variable DOCS_RELEASE_APP_ID and its private key in the
-# secret DOCS_RELEASE_APP_KEY. Its one-hour token checks the Platform out (the
-# repo may be private) and sends the dispatch. The variables
+# Actions: read and write (it can start Intake, never push code), its ID in
+# the variable DOCS_RELEASE_APP_ID and its private key in the secret
+# DOCS_RELEASE_APP_KEY. Its one-hour token checks the Platform out (the repo
+# may be private) and starts Intake. The variables
 # DOCS_PLATFORM_REPO (owner/name, default wso2/docs-platform) and
 # DOCS_PLATFORM_REF (default the pinned major, v1) point at the Platform.
 name: Release a Docs bundle
@@ -118,11 +119,10 @@ jobs:
             --title "$SLUG $EDITION ($TAG)" \
             --notes "Docs bundle for $SLUG, Edition $EDITION. sha256 $SHA256."
           echo "Published $TAG with $(basename "$FILE") (sha256 $SHA256)" >> "$GITHUB_STEP_SUMMARY"
-      - name: Tell the Platform (repository_dispatch docs-release)
+      - name: Start the Platform's Intake (workflow_dispatch)
         env:
           GH_TOKEN: ${{ steps.app.outputs.token }}
           TAG: ${{ steps.plan.outputs.tag }}
         run: |
-          gh api "repos/$PLATFORM_REPO/dispatches" -f event_type=docs-release \
-            -f "client_payload[repo]=$GITHUB_REPOSITORY" -f "client_payload[tag]=$TAG"
-          echo "Told $PLATFORM_REPO about $TAG" >> "$GITHUB_STEP_SUMMARY"
+          gh workflow run intake.yml --repo "$PLATFORM_REPO" -f "repo=$GITHUB_REPOSITORY" -f "tag=$TAG"
+          echo "Started Intake on $PLATFORM_REPO for $TAG" >> "$GITHUB_STEP_SUMMARY"
